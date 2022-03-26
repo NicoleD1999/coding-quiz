@@ -1,45 +1,28 @@
+
 var body = document.body;
 //text in header is going to be highscore & timer that stays there even if user clicks button
 //----------------------------------------------Inital Screen-------------------------------------------------------------------------------------------
-var nav = document.createElement("nav")
-var div = document.createElement("div")
-var highscores = document.createElement ("p")
-var timer = document.createElement("p")
-var initalSection = document.createElement ("section")
-var h1El = document.createElement("h1");
-var para = document.createElement("p")
-var buttonDiv = document.createElement ("div")
-var button = document.createElement("button")
+var nav = document.querySelector("#initial-nav");
+var div = document.querySelector("#h1-div");
+var highscores = document.querySelector ("#p-highscores");
+var timer = document.querySelector("#p-time-left");
+var initalSection = document.querySelector ("#initial-screen");
+var h1El = document.querySelector("#initial-h1");
+var para = document.querySelector("#initial-p");
+var buttonDiv = document.querySelector ("#initial-button-div");
+var button = document.querySelector("#initial-button");
 
 var timeLeft = 5;
 
-highscores.textContent = "View Highscores"
-timer.textContent = "Time Left"
-h1El.textContent = "Coding Quiz Challenge!🔥"
-para.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorret answers will penalize your score AND time by ten seconds!"
-button.textContent = "Let's Go!"
-
-body.appendChild(nav);
-body.appendChild(initalSection)
-initalSection.appendChild(h1El);
-initalSection.appendChild(para)
-initalSection.appendChild(buttonDiv)
-buttonDiv.appendChild (button)
-nav.appendChild(div);
-div.appendChild(highscores);
-div.appendChild(timer);
-
 
 timer.setAttribute("style", "text-align: right;  margin-top:-35px;")
-h1El.setAttribute ("style", "text-align:center;")
-para.setAttribute ("style", "text-align:center;")
+initalSection.setAttribute("style", "text-align: center;")
 buttonDiv.setAttribute("style", "display:flex; justify-content:center; align-items:center;" )
 
 function startTime() {
     var timeInterval = setInterval(function(){
     timeLeft--;
     timer.textContent= "Time Left " + timeLeft;
-    console.log (timeLeft);
    }, 1000);
 }
 
@@ -53,7 +36,17 @@ button.addEventListener ('click', function() {
 //---------------------------------------------^Inital Screen^------------------------------------------------------------------------------------------
 //---------------------------------------------Second Screen--------------------------------------------------------------------------------------
 var section1 = document.querySelector("#section-1");
+var firstQuestion = document.queryCommandValue("#first-question");
+var buttonAnswersDiv1 = document.querySelector("#button-answers-div-1");
+var buttonAnswers = document.querySelector(".button-answers-1");
+
 section1.setAttribute("style", "display:none;");
+
+function firstAnswers() {
+    if (x) {
+
+    }
+}
 
 
 
