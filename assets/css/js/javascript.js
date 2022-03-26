@@ -13,6 +13,7 @@ var buttonDiv = document.querySelector ("#initial-button-div");
 var button = document.querySelector("#initial-button");
 
 var timeLeft = 80;
+var finalScore = 100;
 
 
 timer.setAttribute("style", "text-align: right;  margin-top:-35px;")
@@ -22,6 +23,7 @@ buttonDiv.setAttribute("style", "display:flex; justify-content:center; align-ite
 function startTime() {
     var timeInterval = setInterval(function(){
     timeLeft--;
+    finalScore--;
     timer.textContent= "Time Left " + timeLeft;
    }, 1000);
 }
@@ -67,14 +69,10 @@ function showQuestionOne (q) {
         });
     });
 
-}
-
-
-var questionTwo = {
-    title: "The condition in an if / else statement is enclosed within _____.",
-    alternatives: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    rightAnswer: 2
 };
+
+
+
 function showQuestionTwo (q) {
     
     var titleDiv = document.querySelector("#first-question")
@@ -96,8 +94,25 @@ function showQuestionTwo (q) {
     });
 
 }
+var submitEl = document.querySelector("#submit");
+function getUserInput() {
+    var input = document.getElementById('input').value;
+    var result = document.getElementById('final-score');
+    
+    if (input.length < 3) {
+        result.textContent = 'Please Enter your initals AND score!';
+        //alert('Username must contain at least 3 characters');
+    } else {
+        result.textContent = 'Your score is ' + input;
+        //alert(nameField);
+    }
+    }
 
-
+submitEl.addEventListener('click', function(){
+    event.preventDefault();
+    getUserInput();
+    
+});
 
 
 
