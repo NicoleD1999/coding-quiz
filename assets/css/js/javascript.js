@@ -35,7 +35,11 @@ button.addEventListener ('click', function() {
     showQuestionOne(questionOne);
 
 })
-
+highscores.addEventListener ('click', function(){
+    finalScreen.removeAttribute("class")
+    finalScreen.setAttribute("style", "margin-left:700px;")
+    initalSection.setAttribute ("style", "display: none;")
+})
 //---------------------------------------------^Inital Screen^------------------------------------------------------------------------------------------
 //---------------------------------------------Second Screen--------------------------------------------------------------------------------------
 var section1 = document.querySelector("#section-1");
@@ -113,7 +117,7 @@ function showQuestionTwo (q) {
 var questionThree = {
     title: "Arrays in JavaScript can be used to store ______.",
     alternatives: ["numbers and strings", "other arrays", "booleans", "all of the above"],
-    rightAnswer: 2
+    rightAnswer: 3
 };
 
 
@@ -222,7 +226,8 @@ function showQuestionFive (q) {
 
 }
 var initialsInput = document.querySelector("#input");
-
+var finalScreen = document.querySelector("#final-screen");
+var scoreListItem = document.createElement("li")
 
 function submitScore (){
  var getScores= JSON.parse(localStorage.getItem("highscores")) || []
@@ -233,15 +238,15 @@ function submitScore (){
  }
  getScores.push(scoreModel)
  window.localStorage.setItem("highscores", JSON.stringify(getScores))
- var finalScreen = document.querySelector("#final-screen");
  form.setAttribute("style", "display: none;");
  finalScreen.removeAttribute("class");
+ finalScreen.setAttribute("style", "margin-left:700px;")
 }
 function showScores(){
     var getScores= JSON.parse(localStorage.getItem("highscores")) || []
     getScores.forEach(function(showScore){
         var scoreListItem = document.createElement("li")
-        scoreListItem.textContent = showScore.initials+": "+showScore.score;
+        scoreListItem.textContent = showScore.initials;
         var listDiv= document.getElementById("scores")
         listDiv.append(scoreListItem)
     })
@@ -249,6 +254,14 @@ function showScores(){
 showScores();
 var submitEl = document.querySelector("#submit");
 submitEl.onclick=submitScore
+var goBack = document.querySelector("#go-back")
+
+goBack.addEventListener('click', function(){
+window.location.reload();
+})
+var clearHighscores = document.querySelector("#clear-highscores")
+
+
 // function getUserInput() {
     
 //     if (input.length > 3) {

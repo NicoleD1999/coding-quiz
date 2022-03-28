@@ -1,9 +1,71 @@
-#section-1 {
-    text-align: center;
+#first-question {
+text-align: center;
+padding-top: 40px;
+}
+#initial-screen{
+    padding-top: 40px;
+    font-size: larger;
+    font-family: fantasy;
+}
+#section-1{
+    font-size: larger;
+    font-family: fantasy;
+}
+#form-submit{
+    font-size: larger;
+    font-family: fantasy;
+}
+#initial-button{
+    background-color: rgb(247, 194, 95);
+    border-radius: 10%;
+    font-family: fantasy;
+}
+#initial-nav {
+    background-color: rgb(247, 194, 95);
+    
+}
+#submit {
+    background-color: rgb(247, 194, 95);
+    font-family: fantasy;
 }
 .hide{
     display: none;
 }
 #form-submit{
     text-align: center;
+    font-family: fantasy;
+}
+.button-answers {
+    background-color: rgb(247, 194, 95);
+    border-radius: 10%;
+    font-family: fantasy;
+}
+#button-list{
+    margin-left:700px;
+}
+#right-wrong{
+    margin-left: 500px;
+    font-family: fantasy;
+}
+#bar{
+    font-family: fantasy;
+    background-color: rgb(247, 194, 95);
+    padding: 10px;
+    margin: -10px;
+}
+#highscores{
+    font-family: fantasy;
+}
+#scores{
+    font-family: fantasy;
+    background-color: rgb(247, 194, 95);
+    margin-right: 500px;
+}
+#go-back{
+    background-color: rgb(247, 194, 95);
+    font-family: fantasy;
+}
+#clear-highscores{
+    background-color: rgb(247, 194, 95);
+    font-family: fantasy;
 }

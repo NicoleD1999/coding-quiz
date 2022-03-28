@@ -9,8 +9,10 @@
 </head>
 <body>
     <nav id="inital-nav">
-        <p id="p-highscores">View Highscores</p>
-        <p id="p-time-left">Time Left</p>
+        <div id="bar">
+            <p id="p-highscores">View Highscores</p>
+            <p id="p-time-left">Time Left</p>
+        </div>
     </nav>
     <section id="initial-screen">
         <div id="h1-div">
@@ -24,8 +26,8 @@
     <section id="section-1">
         <div>
             <h1 id="first-question"></h1> 
-        </div>
-            <ol>
+        </div >
+            <ol id="button-list">
                 <li>
                     <button class="button-answers"></button>
                 </li>
@@ -43,7 +45,7 @@
         </div>
     </section>
     <section>
-        <h2 id="right-wrong"></h2>
+        <h3 id="right-wrong"></h3>
     </section>
     <section id="form-submit">
         <div id="add-highscores">
@@ -54,12 +56,12 @@
         </div>
     </section>
     <section id="final-screen" class="hide">
-        <h1>Highscores</h1>
+        <h1 id="highscores">Highscores</h1>
         <ol id="scores">
 
         </ol>
-        <button>Go Back</button>
-        <button>Clear Highscores</button>
+        <button id="go-back">Go Back</button>
+        <button id="clear-highscores">Clear Highscores</button>
     </section>
     <script src="assets/css/js/javascript.js"></script>
 </body>
