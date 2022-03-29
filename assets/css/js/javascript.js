@@ -12,7 +12,7 @@ var para = document.querySelector("#initial-p");
 var buttonDiv = document.querySelector ("#initial-button-div");
 var button = document.querySelector("#initial-button");
 
-var timeLeft = 80;
+var timeLeft = 60;
 var finalScore = 100;
 var timeInterval;
 
@@ -25,6 +25,10 @@ function startTime() {
     timeLeft--;
     finalScore--;
     timer.textContent= "Time Left " + timeLeft;
+    if (timeLeft < 0) {
+        alert ("Time's Up!")
+        window.location.reload();
+    }
    }, 1000);
 }
 
@@ -47,10 +51,11 @@ section1.setAttribute("style", "display: none;")
 var questionOne = {
     title: "Commonly used data types DO NOT include",
     alternatives: ["strings", "booleans", "alerts", "numbers"],
-    rightAnswer: 1
+    rightAnswer: 2
 };
 function showQuestionOne (q) {
     
+
     var titleDiv = document.querySelector("#first-question")
     titleDiv.textContent = q.title;
 
@@ -87,7 +92,7 @@ var questionTwo = {
 
 
 function showQuestionTwo (q) {
-    
+    debugger
     var titleDiv = document.querySelector("#first-question")
     titleDiv.textContent = q.title;
 
@@ -97,6 +102,7 @@ function showQuestionTwo (q) {
 
         element.addEventListener('click', function(){
             if (q.rightAnswer === index ) {
+                debugger
                 showQuestionThree(questionThree);
                 var right = document.querySelector("#right-wrong");
                 right.textContent = "Correct!"
