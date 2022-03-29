@@ -53,6 +53,9 @@ var questionOne = {
     alternatives: ["strings", "booleans", "alerts", "numbers"],
     rightAnswer: 2
 };
+
+
+
 function showQuestionOne (q) {
     
 
@@ -62,9 +65,8 @@ function showQuestionOne (q) {
     var answers = document.querySelectorAll(".button-answers");
     answers.forEach(function(element, index){
         element.textContent=q.alternatives[index];
-
         element.addEventListener('click', function(){
-            if (q.rightAnswer === index ) {
+            if (questionOne.rightAnswer === index ) {
                 var right = document.querySelector("#right-wrong");
                 right.textContent = "Correct!"
                 showQuestionTwo(questionTwo);
@@ -78,11 +80,11 @@ function showQuestionOne (q) {
                 console.log(finalScore);
                 showQuestionTwo(questionTwo);
             }
-
         });
     });
 
-};
+}
+
 
 var questionTwo = {
     title: "The condition in an if / else statement is enclosed within ________.",
@@ -92,7 +94,7 @@ var questionTwo = {
 
 
 function showQuestionTwo (q) {
-    debugger
+
     var titleDiv = document.querySelector("#first-question")
     titleDiv.textContent = q.title;
 
@@ -101,8 +103,8 @@ function showQuestionTwo (q) {
         element.textContent=q.alternatives[index];
 
         element.addEventListener('click', function(){
+            
             if (q.rightAnswer === index ) {
-                debugger
                 showQuestionThree(questionThree);
                 var right = document.querySelector("#right-wrong");
                 right.textContent = "Correct!"
@@ -265,46 +267,7 @@ var goBack = document.querySelector("#go-back")
 goBack.addEventListener('click', function(){
 window.location.reload();
 })
-var clearHighscores = document.querySelector("#clear-highscores")
 
-
-// function getUserInput() {
-    
-//     if (input.length > 3) {
-//         result.textContent = 'Your score is ' + finalScore;
-//         //alert('Username must contain at least 3 characters');
-//     } else {
-//         result.textContent = 'Your score is ' + finalScore;
-//         //alert(nameField);
-//     }
-//     }
-
-// submitEl.addEventListener('click', function(){
-//     event.preventDefault();
-//     getUserInput();
-    
-// });
-
-
-
-
-// var section1 = document.querySelector("#section-1");
-// var firstQuestion = document.queryCommandValue("#first-question");
-// var buttonAnswersDiv1 = document.querySelector("#button-answers-div-1");
-// var buttonAnswers = document.querySelector(".button-answers-1");
-
-// buttonAnswers = true;
-
-// var userAnswersFirst;
-
-// section1.setAttribute("style", "display:none;");
-
-// function firstAnswers() {
-//     if (buttonAnswers=true) {
-//         console.log ("nice!")
-
-//     }
-// }
 
 
 
